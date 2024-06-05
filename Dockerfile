@@ -1,9 +1,9 @@
-FROM python:3
+FROM python:3.11
 
 RUN git clone https://github.com/mansuf/mangadex-downloader.git /app-src && \
     cd /app-src && \
     git checkout v3.0.0 && \
-    pip install .
+    pip install .[optional]
 
 WORKDIR /downloads/
 
